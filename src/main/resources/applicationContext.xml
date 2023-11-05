@@ -9,20 +9,21 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="classpath:myApp.properties"/>
 
-    <bean id="myPet"
-          class="org.chdtu.Dog">
+    <bean id="Book"
+          class="org.chdtu.Book">
+    </bean>
+
+    <bean id="Magazine"
+          class="org.chdtu.Magazine">
+        <constructor-arg ref="Book"/>
     </bean>
 
     <bean id="myPerson"
           class="org.chdtu.Person">
-        <property name="pet" ref="myPet"/>
+        <constructor-arg ref="Magazine"/>
+        <property name="library" ref="Book"/>
         <property name="surname" value="Mogiley"/>
         <property name="age" value="22"/>
-    </bean>
-
-    <bean id="myPerson1"
-          class="org.chdtu.Person">
-        <constructor-arg ref="myPet"/>
     </bean>
 
 </beans>
