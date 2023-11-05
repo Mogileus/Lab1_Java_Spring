@@ -1,7 +1,7 @@
 package org.chdtu;
 
 public class Person {
-    private Pet pet;
+    private Library library;
     private String surname;
     private int age;
 
@@ -10,20 +10,18 @@ public class Person {
     }
 
 
-    public Person(Pet pet) {
+    public Person(Library library) {
         System.out.println("Person bean-constructor is created");
-        this.pet = pet;
+        this.library = library;
     }
 
-    //pet -> setPet
-    public void setPet(Pet pet) {
-        System.out.println("Class Person: set Pet");
-        this.pet = pet;
+    public void setLibrary(Library library) {
+        System.out.println("Class Person: set Library");
+        this.library = library;
     }
 
-    public void callYourPet() {
-        System.out.println("Hello, my lovely pet");
-        pet.say();
+    public void YourOrder() {
+        System.out.println("I want that...");
     }
 
     public String getSurname() {
@@ -31,7 +29,7 @@ public class Person {
     }
 
     public void setSurname(String surname) {
-        System.out.println("Class Person:set surname");
+        System.out.println("Class Person: set surname");
         this.surname = surname;
     }
 
@@ -40,7 +38,7 @@ public class Person {
     }
 
     public void setAge(int age) {
-        System.out.println("Class Person:set age");
+        System.out.println("Class Person: set age");
         this.age = age;
     }
 }
